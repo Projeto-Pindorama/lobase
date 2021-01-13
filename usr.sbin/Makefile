@@ -1,3 +1,3 @@
 TOPDIR?=..
-SUBDIR=	chroot mtree rdate dev_mkdb
+SUBDIR=	chroot mtree rdate tcpbench dev_mkdb
 include ${.TOPDIR}/mk/bsd.subdir.mk
