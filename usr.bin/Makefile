@@ -1,5 +1,5 @@
 TOPDIR?=..
-SUBDIR=	apply awk basename biff cal calendar cmp colrm col column comm \
+SUBDIR=	apply apropos awk basename biff cal calendar cmp colrm col column comm \
 	cut dirname du diff3 diff encrypt env expand false file find fmt fold \
 	from ftp getconf getent getopt grep head hexdump id indent join jot lam leave \
 	lndir logger logname look lorder mail man mkdep mktemp nice nl nohup paste patch \
