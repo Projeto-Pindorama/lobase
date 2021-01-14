@@ -1,24 +1,9 @@
-MAN=	tcpbench.1
+CC ?=		cc
+CFLAGS ?=	-g -O2 -Wall
+LDLIBS ?= -levent
 
-CDIAGFLAGS=     -Wall
-#CDIAGFLAGS+=   -Werror
-CDIAGFLAGS+=    -Wpointer-arith
-CDIAGFLAGS+=    -Wuninitialized
-CDIAGFLAGS+=    -Wstrict-prototypes
-CDIAGFLAGS+=    -Wmissing-prototypes
-CDIAGFLAGS+=    -Wunused
-CDIAGFLAGS+=    -Wsign-compare
-CDIAGFLAGS+=    -Wbounded
-CDIAGFLAGS+=    -Wshadow
+all:
+	${CC} ${CFLAGS} -o tcpbench tcpbench.c ${LDLIBS}
 
-#DEBUG=-g
-
-PROG=tcpbench
-
-LDADD=-lkvm -levent
-DPADD=${LIBKVM} ${LIBEVENT}
-
-#BINGRP= kmem
-#BINMODE=2555
-
-.include <bsd.prog.mk>
+clean:
+	rm tcpbench
